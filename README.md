@@ -10,6 +10,7 @@ PS> .\PowerShar.ps1 -ArchiveName "TestArchive" -Destination C:\Temp -InputObject
 
 This results in a file C:\Temp\TestArchive.ps1 containing four files (file.bin,filename.extension,inputfile.json,directory1.txt) and a folder (C:\Temp\Test) as a ZIP-File.
 
+```
 > ----------------------------------------------------------------------
 > PowerShell Archive - 1.0
 > Author : github@solar-imperium.com
@@ -27,5 +28,5 @@ This results in a file C:\Temp\TestArchive.ps1 containing four files (file.bin,f
 >Writing PowerShell Archive : C:\Temp\TestArchive.ps1
 >
 >Finished...
-
+```
 
