@@ -11,22 +11,22 @@ PS> .\PowerShar.ps1 -ArchiveName "TestArchive" -Destination C:\Temp -InputObject
 This results in a file C:\Temp\TestArchive.ps1 containing four files (file.bin,filename.extension,inputfile.json,directory1.txt) and a folder (C:\Temp\Test) as a ZIP-File.
 
 ```
-> ----------------------------------------------------------------------
-> PowerShell Archive - 1.0
-> Author : github@solar-imperium.com
->----------------------------------------------------------------------
->
->ArchiveName     : TestArchive
->Destination     : C:\Temp
->
->[1] Added item : C:\Temp\file.bin
->[2] Added item : C:\temp\filename.extension
->[3] Added item : C:\temp\inputfile.json
->[4] Added item : C:\temp\directory1.txt
->[5] Added item : C:\Temp\Test
->
->Writing PowerShell Archive : C:\Temp\TestArchive.ps1
->
->Finished...
+----------------------------------------------------------------------
+ PowerShell Archive - 1.0
+ Author : github@solar-imperium.com
+----------------------------------------------------------------------
+
+ArchiveName     : TestArchive
+Destination     : C:\Temp
+
+[1] Added item : C:\Temp\file.bin
+[2] Added item : C:\temp\filename.extension
+[3] Added item : C:\temp\inputfile.json
+[4] Added item : C:\temp\directory1.txt
+[5] Added item : C:\Temp\Test
+
+Writing PowerShell Archive : C:\Temp\TestArchive.ps1
+
+Finished...
 ```
 
