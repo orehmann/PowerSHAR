@@ -27,7 +27,7 @@ PS> **.\PowerShar.ps1 -ArchiveName "TestArchive" -Destination C:\Temp -InputObje
 
 This results in a file C:\Temp\TestArchive.ps1 containing four files (file.bin,filename.extension,inputfile.json,directory1.txt) and a folder (C:\Temp\Test) as a ZIP-File.
 
-```
+```powershell
 ----------------------------------------------------------------------
  PowerShell Archive - 1.0
  Author : github@solar-imperium.com
@@ -51,7 +51,7 @@ PS> **Get-ChildItem -Path C:\temp\Wired_driver_30.0.1_x64 | .\PowerShar.ps1 -Arc
 PowerShar accepts input from pipeline as well. 
 (!!! Do not use -Recurse for Get-ChildItem as this results in double packing. PowerShar itself already does a recurse)
 
-```
+```powershell
 ----------------------------------------------------------------------
  PowerShell Archive - 1.0
  Author : github@solar-imperium.com
@@ -86,7 +86,7 @@ Finished...
 PS> **gci -Path C:\temp\Wired_driver_30.0.1_x64 | .\PowerShar.ps1 -ArchiveName WiredDriver -Verbose**
 
 Same as above but with more Verbose output.
-```
+```powershell
 ----------------------------------------------------------------------
  PowerShell Archive - 1.0
  Author : github@solar-imperium.com
@@ -128,7 +128,7 @@ Extract the PowerShar Archive by simply running it.
 
 PS> .\WiredDriver.ps1
 
-```
+```powershell
 ---------------------------------------------------------------------
  PowerShell Archive - 1.1
  Author : github@solar-imperium.com
@@ -162,7 +162,7 @@ PS> .\WiredDriver.ps -List
 
 Simply List Content of archive.
 
-```
+```powershell
 ----------------------------------------------------------------------
  PowerShell Archive - 1.1
  Author : github@solar-imperium.com
@@ -220,13 +220,16 @@ Finished...
 
 ## Tips
 
-Use **-EncryptionKey** to AES encrypt the payload (not the resulting script).
+- Use **-EncryptionKey** to AES encrypt the payload (not the resulting script).
 
 PS> **Get-ChildItem -Path C:\temp\Wired_driver_30.0.1_x64 | .\PowerShar.ps1 -ArchiveName WiredDriver -EncryptionKey MySecret**
 
-To decrypt specify the EncryptionKey as well
+- To decrypt specify the EncryptionKey as well
 
 PS> **.\WiredDriver.ps1 -EncryptionKey MySecret**
 
 Do not use **-Recurse** when using Get-ChildItem to pass files by pipeline input. PowerShar creates ZIP from every top-level folder found.
 Specifying **-Recurse** bloats the resulting archive by multiply archving the same content.
+
+- Some email systems block certain type of files by extensions such as __*.ps1__. Rename the file to something else like __*.txt, *.dat, *.jpg__
+  
