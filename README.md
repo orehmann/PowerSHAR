@@ -53,7 +53,7 @@ PowerShar accepts input from pipeline as well.
 
 ```powershell
 ----------------------------------------------------------------------
- PowerShell Archive - 1.0
+ PowerShell Archive - 1.1
  Author : github@solar-imperium.com
 ----------------------------------------------------------------------
 
@@ -88,7 +88,7 @@ PS> **gci -Path C:\temp\Wired_driver_30.0.1_x64 | .\PowerShar.ps1 -ArchiveName W
 Same as above but with more Verbose output.
 ```powershell
 ----------------------------------------------------------------------
- PowerShell Archive - 1.0
+ PowerShell Archive - 1.1
  Author : github@solar-imperium.com
 ----------------------------------------------------------------------
 
